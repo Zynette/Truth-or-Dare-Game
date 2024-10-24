@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Truth or Dare Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Truth or Dare</h1>
+    </header>
+    <main>
+        <div id="instructions-overlay">
+            <div id="instructions-content">
+                <h2>Game Instructions</h2>
+                <p>Welcome to the spine-chilling world of Horror Truth or Dare! Prepare yourself for a night filled with suspense, fright, and eerie revelations. Follow these instructions to play the game and embrace the terror:</p>
+                <ol>
+                    <li>Enter Player Name: Begin by entering your name in the provided input field. Each player must enter their name before starting their turn. Click the <strong>Ready</strong> button to proceed.</li>
+                    <li>Flip the Coin: A mysterious coin will appear. Click on the coin to flip it. The coin will reveal your fate: <strong>Truth</strong> or <strong>Dare</strong>.</li>
+                    <li>Receive Your Challenge: Depending on the coin's decision, a chilling <strong>Truth</strong> question or a daunting <strong>Dare</strong> will appear on the screen. Read your challenge carefully and prepare yourself.</li>
+                    <li>Start the Timer: As soon as the challenge is revealed, the timer will start counting. Complete your challenge as the seconds tick away.</li>
+                    <li>Complete the Challenge: Once you have faced your fear or revealed your darkest secret, click the <strong>Done</strong> button. The timer will stop, and your performance time will be recorded.</li>
+                    <li>Log Your History: Your name, the challenge, and the time taken will be logged in the history section. The history log will keep a record of all players' challenges and times.</li>
+                    <li>Repeat: Pass the device to the next player and repeat the process from step 1. Continue playing until everyone has faced their fears and revealed their truths.</li>
+                </ol>
+                <button id="start-game-btn">Okay</button>
+            </div>
+        </div>
+
+        <div id="game-container" style="display:none;">
+            <div id="name-input-container">
+                <label for="player-name">Enter Player Name:</label>
+                <input type="text" id="player-name">
+                <button id="ready-btn">Ready</button>
+            </div>
+            <div id="coin-container">
+                <svg id="coin" width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="darkred" />
+                    <text id="coin-text" x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="20" fill="white">Flip</text>
+                </svg>
+            </div>
+            <div id="result-container"></div>
+            <div id="timer-container"></div>
+            <button id="done-btn" style="display:none;">Done</button>
+        </div>
+        <div id="history-container">
+            <h2>History</h2>
+            <ul id="history-list"></ul>
+        </div>
+        <audio autoplay loop>
+            <source src="audio.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>    
+    </main>
+
+    <footer>
+        <p class="center">&copy; 2024 Zy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
